@@ -29,16 +29,16 @@ void setup() {
   Serial.begin(115200);
   
   strip.begin();
-  strip.setBrightness(150); // 250 Full brightness
+  strip.setBrightness(250); // 250 Full brightness
   strip.show();             // All pixels off
 }
 
 void loop() {
   alternateColorCascade();
-/*
-  basicLedCar(X_pin,47,244,10,aPix);
-  basicLedCar(Y_pin,255,0,0,bPix);
-*/
+
+//  basicLedCar(X_pin,47,244,10,aPix);
+//  basicLedCar(Y_pin,255,0,0,bPix);
+
   strip.show();
   delay(50);
 }
