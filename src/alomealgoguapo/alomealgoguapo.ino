@@ -2,7 +2,6 @@
 
 #define NPIXEL 30
 #define LEDPIN 7
-//#define UMBRAL 60
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NPIXEL, LEDPIN); // (pixels, pin)
 
@@ -53,7 +52,7 @@ void loop() {
     contador++;
   } else {
     contador = 0;
-    mediaUmbral = ((mediaUmbral)+(mediaProgreso*0.1))*0.5;
+    mediaUmbral = (mediaProgreso/10);
     mediaProgreso = 0;
   }
 
@@ -70,7 +69,7 @@ void loop() {
   }
     
   strip.show();
-  delay(50);
+  delay(5);
 }
 
 void alternateColorCascade() {
